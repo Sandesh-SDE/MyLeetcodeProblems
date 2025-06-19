@@ -52,8 +52,6 @@ def containsDuplicate2(nums):
     return False
 
 def containsDuplicate(nums):
-    print(len(nums), len(set(nums)))
-
     return not len(nums) == len(set(nums))
 
 

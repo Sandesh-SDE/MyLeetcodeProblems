@@ -60,7 +60,7 @@ def twoSum1(nums, target):
     return index
 
 # Hash Map	O(n)	O(n)	Indices	Best for unsorted input
-def twoSum3(nums, target):
+def twoSum2(nums, target):
 
     seen = {}
     for i, v in enumerate(nums):
@@ -76,7 +76,7 @@ def twoSum3(nums, target):
 
 
 # Set Check Only	O(n)	O(n)	True/False	Use for existence check only
-def twoSum2(nums, target):
+def twoSum3(nums, target):
 
     seen = set()
 
@@ -85,10 +85,6 @@ def twoSum2(nums, target):
             return True
 
         seen.add(i)
-
-        
-        
-
 
 nums1 = [3,2,4]
 target1 = 6
@@ -102,7 +98,7 @@ target3 = 6
 # op = twoSum1(nums, target)
 # print(op)
 
-op1 = twoSum1(nums2, target2)
+op1 = twoSum(nums2, target2)
 print(op1)
 
 # op2 = twoSum2(nums2, target2)
