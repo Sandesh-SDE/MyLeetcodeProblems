@@ -58,7 +58,6 @@ def product_of_array_iteself2(nums):
 
     return op
 
-
 nums1 = [1,2,3,4] 
 nums2 = [-1,1,0,-3,3]
 op1 = product_of_array_iteself1(nums1)
