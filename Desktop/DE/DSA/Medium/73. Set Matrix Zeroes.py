@@ -13,8 +13,7 @@ Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 
 '''
 
-
-def setMatrixtoZero(matrix):
+def setMatrixtoZero1(matrix):
 
     # print(len(m), len(m[0]))
 
@@ -42,4 +41,15 @@ def setMatrixtoZero(matrix):
 
 
 matrix = [[0,1,1],[1,0,1],[1,1,1]]
+
+'''
+0 1 1
+1 0 1
+1 1 1
+
+0 0 0
+0 0 0
+0 0 1
+'''
+
 op = setMatrixtoZero(matrix)
