@@ -25,7 +25,14 @@ Put all three elements in original into the first row of the constructed 2D arra
 
 '''
 
-def convertArray1(arr, r, c):
+# Best solution that i understoop
+'''
+step 1 : get the n value to know how many dimesion that you need to make
+step 2: if n is 2 then use slice method from 0 
+step 3: ex : [0:2] it will print index values 0 and 1 
+step 4: so append values from orginal to new array accordingly
+'''
+def convertArray(arr, r, c):
 
     if r * c != len(arr):
         return None
@@ -41,8 +48,6 @@ def convertArray1(arr, r, c):
 
 
 def convertArray2(arr, r, c):
-
-    
 
     if r * c != len(arr):
         return None
