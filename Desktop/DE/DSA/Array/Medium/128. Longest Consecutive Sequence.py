@@ -80,3 +80,41 @@ def longestConsecutive(nums):
 nums = [1,0,1,2]
 # nums = [9,1,4,7,3,-1,0,5,8,-1,6]
 longestConsecutive(nums)
+
+
+'''
+Step by Step Algorithm
+Convert List to Set:
+
+num_set = set(nums)
+Convert the list nums to a set num_set to allow O(1) time complexity for checking the presence of elements. This step ensures that we can quickly determine if a number is part of the sequence.
+Initialize the Longest Sequence Length:
+
+longest = 0
+Initialize a variable longest to keep track of the length of the longest consecutive sequence found so far. Set it to 0 initially.
+Iterate Through Each Number in the List:
+
+for n in nums:
+Iterate through each number n in the list nums.
+Check if Current Number is the Start of a Sequence:
+
+if n - 1 not in num_set:
+For each number n, check if n - 1 is not in num_set. This check determines if n is the start of a new sequence. If n - 1 is not present, it means n is the smallest number in the current sequence.
+Initialize Length of Current Sequence:
+
+length = 1
+If n is the start of a new sequence, initialize a variable length to 1. This variable will keep track of the length of the current sequence starting with n.
+Extend the Current Sequence:
+
+while n + length in num_set:
+    length += 1
+Use a while loop to extend the current sequence. While n + length is present in num_set, increment length. This loop continues until the next consecutive number is not found in the set, indicating the end of the current sequence.
+Update the Longest Sequence Length:
+
+longest = max(longest, length)
+After determining the length of the current sequence, update longest by taking the maximum of longest and length. This ensures that longest always holds the length of the longest consecutive sequence found so far.
+Return the Result:
+
+return longest
+After iterating through all numbers in the list, return longest, which now holds the length of the longest consecutive sequence.
+'''
