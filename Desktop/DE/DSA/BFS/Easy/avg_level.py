@@ -4,13 +4,6 @@ class TreeNode:
         self.left = None
         self.right = None
 
-def print_tree(node, level=0, prefix="Root: "):
-    if node is not None:
-        print(" " * (level * 4) + prefix + str(node.val))
-        if node.left or node.right:
-            print_tree(node.left, level + 1, prefix="L--- ")
-            print_tree(node.right, level + 1, prefix="R--- ")
-
 # Build the 4-level BST
 def build_tree():
     root = TreeNode(3)
@@ -18,32 +11,15 @@ def build_tree():
     root.left = TreeNode(9)
     root.right = TreeNode(20)
     
-    # root.left.left = TreeNode(None)
-    # root.left.right = TreeNode(None)
-
-
     root.right.left = TreeNode(15)
     root.right.right = TreeNode(7)
-    # root.right.left = TreeNode(10)
-    # root.right.right = TreeNode(14)
-    
-    # root.left.left.left = TreeNode(1)
-    # root.left.left.right = TreeNode(3)
-    # root.left.right.left = TreeNode(5)
-    # root.left.right.right = TreeNode(7)
-    # root.right.left.left = TreeNode(9)
-    # root.right.left.right = TreeNode(11)
-    # root.right.right.left = TreeNode(13)
-    # root.right.right.right = TreeNode(15)
     
     return root
-
-
+    
 '''
 Note : when we want to traverse bST in level order we need to apply BFS
     
     for other traversal like inorder, preorder, postorder apply DFS
-
 
     here is the same code to print items level wise
 
